@@ -1,0 +1,17 @@
+div{
+    background-image: url("image.jpg");
+    width: 17%;
+    size: 1.4em;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(243, 235, 158);
+    border-radius: 0.5em;
+
+}
+body{
+    width: 100%;
+}
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+}
