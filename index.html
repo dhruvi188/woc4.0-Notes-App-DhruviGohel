@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="index.css">
-        <title>
-            html website
-        </title>
+        <title>java script</title>
     </head>
-    <body>
-        <h1 style="color: darkblue; text-align:center;">
-          notes app  
-        </h1>
-        <div>
-        <h2 style="color:lightgray">
-            task list
-        </h2>
-      <ul style="color:aqua; list-style-type: none; ">
-          <li>item1</li>
-          <li>item2</li>
-          <li>item3</li>
-      </ul>
-       
-      <button>add task</button>
-      <button type="button" onclick="alert('item is deleted')">Delete task</button> 
+    <body id="body">
+        <header>
+            <div class="appname">
+                <h1>Notes App</h1>
+            </div>
+            <br/>
+        </header>
+        </main>
+        <div id="new">
+
+        </div>
+        
+        
+        <div id="addlist">
+            <button>+</button>
         </div>
     </body>
-</html>
+    </html>
+    <script>
+        document.getElementById("addlist").addEventListener("click",Addlist);
+        function Addlist(){
+            
+            var comh1=document.createElement("h1");
+            var newlist = prompt('enter list title');
+            var comhead = document.createTextNode("newlist");
+            comh1.appendChild(comhead);
+            document.getElementById("new").appendChild(comh1);
+            const tasks = [];
+            var size=5;
+            for(var i=0; i<size; i++) {
+          tasks[i] = prompt('Enter item ' + (i+1));}
+            
+            var n="<ul>";
+            for(let i=0;i<tasks.length;i++)
+            {
+                n+="<li>"+tasks[i]+"</li>";
+            }
+            n+="</ul>";
+
+            document.getElementById("new").innerHTML+= n;
+          }
+    </script>
